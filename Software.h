@@ -18,11 +18,11 @@ public:
 
 /**
  * Construcctor de la clase Software 
- * @param _nombre
- * @param _developer
- * @param _clasfEdad
- * @param _precio
- * @param _tipo
+ * @param string 
+ * @param string
+ * @param int
+ * @param int
+ * @param string
  * 
 */
 Software(string _nombre, string _developer, int _clasfEdad, int _precio,string _tipo ){

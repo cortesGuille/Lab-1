@@ -14,12 +14,16 @@ NodoU* head;
 int cont;
 
 public:
-//Constructor de Lista Usuario
+/**
+ * Constructor de la Lista de Usuarios
+*/
 ListaDeUsuario(){
 this->head=NULL;
 this->cont=0;
 }
-//destrucutor Lista de Usuarios
+/**
+ * Destructor de la ListaUsuarios
+*/
 ~ListaDeUsuario(){
   NodoU* actual = this->head;
   while(actual){
@@ -28,7 +32,10 @@ this->cont=0;
     actual =siguiente;
   }
 }
-//Funcion para agregar Usuarios a la Lista
+/**
+ * Metodo para agregar un Usuario a la Lista
+ * @param Usuario*
+*/
 void agregaUsuario(Usuario* user){
 NodoU* nuevoNodo= new NodoU(user);
 if(this->head==NULL){
@@ -44,6 +51,10 @@ if(this->head==NULL){
 }
 
 }
+/**
+ * Elimina un Usuario de la lista 
+ * @param Usuario
+*/
 void eliminarUsuario(Usuario* _usuario){
  if(!this->head ||! _usuario) return;
 
@@ -67,6 +78,9 @@ void eliminarUsuario(Usuario* _usuario){
       cont--;
     }
 }
+/**
+ * Muestra a todos los Usuarios en la Lista
+*/
 void mostrarListaUsuarios(){
   NodoU* temp=this->head;
   while(temp!=NULL){
@@ -76,6 +90,12 @@ void mostrarListaUsuarios(){
     temp=temp->sgte;
   }
 }
+/**
+ * Busca un usuario en la lista, si existe lo retorna
+ * @param string nombre
+ * @param string password
+ * @return Usuario
+*/
 Usuario* buscarUsuario(string _nombre, string _password){
   NodoU* actual= this->head;
   while(actual!=NULL){
@@ -87,6 +107,11 @@ Usuario* buscarUsuario(string _nombre, string _password){
   }
   return NULL; 
 }
+/**
+ * Busca a un Usuario solo por su nombre, si existe lo retorna
+ * @param string nombre
+ * @return Usuario*
+*/
 Usuario* buscarUsuarioPorNombre(string _nombre){
   NodoU* actual= this->head;
   while(actual!=NULL){
@@ -98,6 +123,7 @@ Usuario* buscarUsuarioPorNombre(string _nombre){
   return NULL;
   
 }
+//getter
 int getCont(){
   return this->cont;
 }

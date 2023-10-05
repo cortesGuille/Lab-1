@@ -16,8 +16,17 @@ class ListaSoftware{
         this->cabeza=NULL;
         _cont=0;
     }
+    /**
+     * Elimina a Software de la lista
+     * @param Software*
+     * 
+    */
     void eliminarSoftware(Software* sof){
     }
+    /***
+     * Agrega Software a la Lista
+     * @param Software*
+    */
     void agregarSoftware(Software* sof){
         NodoS* nNodo= new NodoS(sof);
         if(this->cabeza==NULL){
@@ -40,6 +49,10 @@ class ListaSoftware{
     int getCont(){
         return this->_cont;
     }
+    /**
+     * Muestra solo aquellos software que su clasificacion de edad sea
+     * menor a 18
+    */
     void mostrarSoftwareMenor18(){
     NodoS* temp=this->cabeza;
     while(temp!=NULL){
@@ -51,6 +64,9 @@ class ListaSoftware{
      temp=temp->sgte;
     }
     }
+    /**
+     * Muestra todos los Software de la lista, exepto los de "Seguridad"
+    */
     void mostrarSoftware(){
     NodoS* temp=this->cabeza;
     while(temp!=NULL){
@@ -61,6 +77,9 @@ class ListaSoftware{
     temp=temp->sgte;
     }
     }
+    /**
+     * Muestra todos los Software de la lista
+    */
     void mostrarSoftwareAdmin(){
         NodoS* temp= this->cabeza;
         while(temp!=NULL){
@@ -68,6 +87,11 @@ class ListaSoftware{
             temp=temp->sgte;
         }
     }
+    /**
+     * Muestra los Software que posee un Usuario
+     * @param Usuario*
+     * 
+    */
     void mostrarSUsuario(Usuario* usuario){
         NodoS* temp=this->cabeza;
         while(temp!=NULL){
@@ -79,6 +103,13 @@ class ListaSoftware{
         temp=temp->sgte;
         }
     }
+    /**
+     * Busca si un Software esta en la lista, en caso de que si exista
+     * devuelve el Software encontrado
+     * @param string nombre del Software
+     * @param string nombre del Developer
+     * @return Software*
+    */
     Software* buscarSoftware(string name, string develop){
     NodoS* actual= this->cabeza;
     while(actual!=NULL){
@@ -91,9 +122,15 @@ class ListaSoftware{
     cout<<"No se encontro el Software"<<endl;
     return NULL;
     }
-    void eliminarUsuariodeSofware(Usuario* user){
+    /**
+     * Elimina el Usuario de un Software de la lista
+     * @param Usuario*
+     * @param string nombre del Software
+     * @param string nombre del Developer
+    */
+    void eliminarUsuariodeSofware(Usuario* user,string name, string deve){
         if(!this->cabeza) return;
-        Software* sTemp= buscarSoftware(user->getNombre(),user->getPassword());
+        Software* sTemp= buscarSoftware(name,deve);
         if(sTemp!=NULL){
             sTemp->getListaDeUsuarios()->eliminarUsuario(user);
             cout<<"Se Elimino Software de Su biblioteca"<<endl;
@@ -101,7 +138,11 @@ class ListaSoftware{
             
             
     }
-
+    /**
+     * Muestra los Software Social de un Usuario
+     * @param Usuario
+     * 
+    */
     void mostrarSocialsuario(Usuario* user){
         NodoS* temp=this->cabeza;
         while(temp!=NULL){
@@ -112,7 +153,11 @@ class ListaSoftware{
             temp=temp->sgte;
         }
     }
-
+    /**
+     * Elimina un software de la lista
+     * @param Software
+     * 
+    */
     void EliminarSoftware(Software* sof){
         if(!this->cabeza) return;
         if(this->cabeza->_Software->getNombre()== sof->getNombre()

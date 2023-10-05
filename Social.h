@@ -40,12 +40,20 @@ getListaDeUsuarios()->mostrarListaUsuarios();
 int getnAmigos(){
 return this->nAmigos;
 }
+/**
+ * Funcion para agregar Amigos de la clase Social
+*/
 void agregarAmigos(Usuario* _usuario){
     Usuario* ptu=_usuario;
     getListaDeUsuarios()->agregaUsuario(_usuario);
     nAmigos++;
 }
-
+/**
+ * Funcion virtual de la Clase Software
+ * Implementada en Social
+ * muestra los atributos de la clase
+ * 
+*/
 void mostrar(){
     Software::mostrar();
     cout<<"Nombre: "+this->getNombre()+" Developer: "+this->getDeveloper()+" Tipo: "+this->getTipo()<<endl;

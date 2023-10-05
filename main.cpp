@@ -491,7 +491,8 @@ cout<<"Ingrese Nombre del Software a eliminar: "<<endl;
 cin>>name;
 cout<<"Ingrese Developer del Software a eliminar:  "<<endl;
 cin>>deve; 
-lista->eliminarUsuariodeSofware(u);
+
+lista->eliminarUsuariodeSofware(u,name,deve);
 }
 void addSoftware(ListaSoftware* lista, Usuario* u){
 string name;
