@@ -1,4 +1,7 @@
 # Lab 1
+
+### Programa
+ El programa se inicia normalmente sin meter otro .cpp
 ### Documentacion 
 Encontrada en el Codigo en cada una de las funciones 
 ## Objetos
@@ -349,3 +352,98 @@ s6{
   Precio: 50
   Tipo: "Seguridad"
 }
+
+
+### ---------------------Amigos----------------------
+
+a1{
+  Nombre: "Juan"
+  Edad: 18
+  Social: "Facebook"
+}
+
+a2{
+  Nombre: "Pedro"
+  Edad: 18
+  Social: "Facebook"
+}
+
+a3{
+  Nombre: "Matias"
+  Edad: 11
+  Social: "Facebook"
+}
+
+a4{
+  Nombre: "Kevin"
+  Edad: 10
+  Social: "Facebook"
+}
+
+a5{
+  Nombre: "User1"
+  Edad: 10
+  Social: "Facebook"
+}
+
+a6{
+  Nombre: "Pepito"
+  Edad: 9
+  Social: "Facebook"
+}
+
+a7{
+  Nombre: "Manolito"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a8{
+  Nombre: "Juan A"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a9{
+  Nombre: "Roberto"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a10{
+  Nombre: "Felipe"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a11{
+  Nombre: "Allyson"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a12{
+  Nombre: "Sofia"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a13{
+  Nombre: "Maria"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a14{
+  Nombre: "Mario"
+  Edad: 20
+  Social: "Twitter"
+}
+
+a15{
+  Nombre: "Jose"
+  Edad: 30
+  Social: "Facebook"
+}
+
+

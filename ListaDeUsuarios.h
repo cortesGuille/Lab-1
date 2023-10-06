@@ -5,7 +5,10 @@
 
 
 using namespace std;
-
+/**
+ * @class Lista de Usuarios que contiene Usuarios
+ * 
+*/
 class ListaDeUsuario{
 
 private:

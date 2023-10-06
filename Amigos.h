@@ -2,6 +2,10 @@
 #include <iostream>
 #include <vector>
 using namespace  std;
+/**
+ * @class clase amigos
+ * 
+*/
 class Amigos{
 
 private:

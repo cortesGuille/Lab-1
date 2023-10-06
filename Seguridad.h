@@ -2,7 +2,9 @@
 #include<iostream>
 #include "Software.h"
 using namespace std;
-
+/**
+ * @class Seguridad que es heredada de Software
+*/
 class Seguridad :public Software{
 
 private:

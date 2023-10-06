@@ -3,7 +3,11 @@
 #include "Software.h"
 
 using namespace std;
-
+/**
+ * 
+ * @class Juegos heredada de Software
+ * 
+*/
 class Juegos :public Software{
 
 private:

@@ -3,7 +3,10 @@
 #include "Usuario.h"
 
 using namespace std;
-
+/**
+ * @class Nodo para enlazar Usuarios
+ * 
+*/
 class NodoU{
 public:
 

@@ -3,7 +3,11 @@
 #include "NodoS.h"
 #include "Software.h"
 using namespace std;
-
+/**
+ * 
+ * @class Lista de Software
+ * Almacenas punteros de Software
+*/
 class ListaSoftware{
     private:
 

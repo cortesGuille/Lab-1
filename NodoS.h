@@ -3,7 +3,9 @@
 #include "Software.h"
 
 using namespace std;
-
+/**
+ * @class Nodo para enlazar Software
+*/
 class NodoS{
 
  public:

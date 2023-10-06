@@ -2,7 +2,11 @@
 #include<iostream>
 #include "Software.h"
 using namespace std;
-
+/**
+ * 
+ * @class Clase Oftmatica heredada de Software
+ * 
+*/
 class Ofmatica :public Software{
 
 private:

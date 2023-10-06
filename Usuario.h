@@ -3,7 +3,10 @@
 #include <iostream>
 #include "Amigos.h"
 using namespace std;
-
+/**
+ * @class Clase Usuario
+ * 
+*/
 class Usuario{
 
 private:

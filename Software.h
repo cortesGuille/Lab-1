@@ -2,7 +2,9 @@
 #include <iostream>
 #include "ListaDeUsuarios.h"
 using namespace std;
-
+/**
+ * @class Clase Software
+*/
 class Software{
 
 private:

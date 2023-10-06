@@ -4,7 +4,9 @@
 #include "Software.h"
 
 using namespace std;
-
+/**
+ * @class Social que es heredada de Sofware
+*/
 class Social :public Software{
 
 private:

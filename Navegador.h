@@ -3,7 +3,10 @@
 #include "Software.h"
 
 using namespace std;
-
+/**
+ * @class Navegador que es heredada de Software
+ * 
+*/
 class Navegador : public Software{
 
 private:

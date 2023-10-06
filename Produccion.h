@@ -3,7 +3,10 @@
 #include "Software.h"
 
 using namespace std;
-
+/**
+ * @class Clase Produccion que es Heredada de Software
+ * 
+*/
 
 class Produccion :public Software{
 

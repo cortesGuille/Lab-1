@@ -15,15 +15,44 @@
 #include "ListaDeUsuarios.h"
 #include "ListaSoftware.h"
 using namespace std;
-
+/**
+ * Funcion para iniciar sesion dentro del programa
+ * en caso de no encontrase se pregunta si quiere crear un nuevo
+ * Usuario
+ * @param ListaDeUsuario*
+*/
 Usuario* Login(ListaDeUsuario* lU);
+/**
+ * Funcion para poder agregar un Usuario dentro de la lista
+ * @param ListaDeUsuario*
+*/
 Usuario* Registrar(ListaDeUsuario* lU);
+/**
+ * Funcion para agregar un software a la lista del Usuario
+ * @param ListaDeUsuario*
+ * @param Usuario*
+*/
 void addSoftware(ListaSoftware* lista, Usuario* u);
+/**
+ * Funcion para eliminar Software
+ * @param ListaSoftware*
+ * @param Usuario*
+ * 
+*/
 void deleteSoftware(ListaSoftware* lista,Usuario* u); 
+/**
+ * Agregar Usuario a la lista
+ * @param ListaDeUsuario
+*/
 void addUser(ListaDeUsuario* lista);
+/**
+ * Crea un nuevo Software y lo agrega a la lista de Software
+ *  @param ListaSoftware
+ * 
+*/
 void instalSoftware(ListaSoftware* lista);
 int main(){
-
+//Instancias de las listas
 ListaSoftware* BibliotecaG= new ListaSoftware();
 ListaDeUsuario* ListaGeneralDeUsuarios= new ListaDeUsuario();
 
@@ -147,10 +176,10 @@ ListaGeneralDeUsuarios->agregaUsuario(user15);
 
 Amigos* a1= new Amigos("Juan",18,"Facebook");
 Amigos* a2= new Amigos("Pedro",18,"Facebook");
-Amigos* a3= new Amigos("Matias",11,"Facebook");//menor
-Amigos* a4= new Amigos("Kevin",10,"Facebook");//menor
-Amigos* a5= new Amigos("User1",10,"Facebook");//menor
-Amigos* a6= new Amigos("Pepito",9,"Facebook");//menor
+Amigos* a3= new Amigos("Matias",11,"Facebook");
+Amigos* a4= new Amigos("Kevin",10,"Facebook");
+Amigos* a5= new Amigos("User1",10,"Facebook");
+Amigos* a6= new Amigos("Pepito",9,"Facebook");
 Amigos* a7= new Amigos("Manolito",20,"Twitter");
 Amigos* a8= new Amigos("Juan A",20,"Twitter");
 Amigos* a9= new Amigos("Roberto",20,"Twitter");
