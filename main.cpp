@@ -144,6 +144,7 @@ Usuario* user14= new Usuario("Maria","3ASsdadjk",20,false,"maria@gmail.com");
 ListaGeneralDeUsuarios->agregaUsuario(user14);
 Usuario* user15= new Usuario("Mario","233ASdjk",20,false,"mario@gmail.com");
 ListaGeneralDeUsuarios->agregaUsuario(user15);
+
 Amigos* a1= new Amigos("Juan",18,"Facebook");
 Amigos* a2= new Amigos("Pedro",18,"Facebook");
 Amigos* a3= new Amigos("Matias",11,"Facebook");//menor
@@ -158,14 +159,19 @@ Amigos* a11= new Amigos("Allyson",20,"Twitter");
 Amigos* a12= new Amigos("Sofia",20,"Twitter");
 Amigos* a13= new Amigos("Maria",20,"Twitter");
 Amigos* a14= new Amigos("Mario",20,"Twitter");
+Amigos* a13= new Amigos("Jose",30,"Facebook");
 //AGREGANDO AMIGOS A TODOS LOS USUARIOS
 //JUAN
     //s1 Facebook s2 Twitter
 s1->getListaDeUsuarios()->agregaUsuario(user1); //Software
 user1->agregarAmigo(a2);
 user1->agregarAmigo(a3);
-//Pedro
+//JOSE
 s1->getListaDeUsuarios()->agregaUsuario(user3);
+user3->agregarAmigo(a2);
+user3->agregarAmigo(a1);
+//Pedro
+s1->getListaDeUsuarios()->agregaUsuario(user2);
 user3->agregarAmigo(a1);
 user3->agregarAmigo(a4);
 //Matias
@@ -240,6 +246,9 @@ if(uL->getLog()==true){
     cout<<"4. Crear Usuario"<<endl;
     cout<<"5. Mostrar Usuarios"<<endl;
     cout<<"6. Logout"<<endl;
+    cout<<"7. Agregar  Software"<<endl;
+    cout<<"8. Eliminar Software en tu Biblioteca"<<endl;
+    cout<<"9. Mostrar mis Software"<<endl;
     cin>>opcion;
 
     if(opcion==1){
@@ -272,7 +281,26 @@ if(uL->getLog()==true){
     }else  if(opcion==6){
         //Cierre de sesion
         cierrePrograma=false;
-    }else{
+    }else if(opcion==7){
+        //mostrar los software dependiendo de la edad 
+        // del usuario que este en ese momento
+         int _age=uL->getEdad();
+            if(_age<18){
+                BibliotecaG->mostrarSoftwareMenor18();
+            }else{
+                
+                BibliotecaG->mostrarSoftware();
+            }
+        //agrega el software a su biblioteca
+            addSoftware(BibliotecaG,uL);
+    }else if(opcion==8){
+        //elimina el software de su biblioteca
+        deleteSoftware(BibliotecaG,uL); 
+        }else if(opcion==9){
+         //Muestra los Softwares de la Biblioteca del Usuario
+        cout<<"Mostrando tus Softwares: "<<endl;
+        BibliotecaG->mostrarSUsuario(uL);
+            }else{
         cout<<"Opcion no Valida"<<endl;
     }
   }
