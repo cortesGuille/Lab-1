@@ -159,7 +159,7 @@ Amigos* a11= new Amigos("Allyson",20,"Twitter");
 Amigos* a12= new Amigos("Sofia",20,"Twitter");
 Amigos* a13= new Amigos("Maria",20,"Twitter");
 Amigos* a14= new Amigos("Mario",20,"Twitter");
-Amigos* a13= new Amigos("Jose",30,"Facebook");
+Amigos* a15= new Amigos("Jose",30,"Facebook");
 //AGREGANDO AMIGOS A TODOS LOS USUARIOS
 //JUAN
     //s1 Facebook s2 Twitter
