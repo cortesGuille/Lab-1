@@ -41,7 +41,7 @@ s1{Nombre:"Facebook" Developer:"Meta" ClasificacionDeEdad:13 Precio:0  Tipo: "So
 
 s2{Nombre:"Twitter" Developer:"Twitter" ClasificacionDeEdad: 18 Precio:0  Tipo: "Social" }
 
-#### Navegor
+#### Navegador
 
 n1{Nomnre:"Chrome" Developer: "Google" ClasifiacionDeEdad:0 Precio:0 Tipo:"Navegador"}
 
