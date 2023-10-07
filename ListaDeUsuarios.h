@@ -130,7 +130,10 @@ Usuario* buscarUsuarioPorNombre(string _nombre){
 int getCont(){
   return this->cont;
 }
-
+/**
+ * buscar usuario en la I poss de la lista
+ * @param int poss
+*/
 Usuario* buscarUsuarioI(int poss){
   if(poss<-1){
     return NULL;
