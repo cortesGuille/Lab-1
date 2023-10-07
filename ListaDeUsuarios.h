@@ -131,4 +131,17 @@ int getCont(){
   return this->cont;
 }
 
+Usuario* buscarUsuarioI(int poss){
+  if(poss<-1){
+    return NULL;
+  }
+  NodoU* actual= this->head;
+  int contador =0;
+  while(actual != NULL && contador < poss){
+    actual= actual->sgte;
+    contador++;
+  }
+  return actual->_usuario;
+}
+
 };

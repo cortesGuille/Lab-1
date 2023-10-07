@@ -51,7 +51,14 @@ void addUser(ListaDeUsuario* lista);
  * 
 */
 void instalSoftware(ListaSoftware* lista);
+/**
+ * Desinstala un Software completamente de la Biblioteca
+ * @param ListaDeUsuarios*
+ * @param Software*
+*/
+bool desinstalarSoftware(ListaDeUsuario* listaU,Software* _software);
 int main(){
+
 //Instancias de las listas
 ListaSoftware* BibliotecaG= new ListaSoftware();
 ListaDeUsuario* ListaGeneralDeUsuarios= new ListaDeUsuario();
@@ -289,9 +296,15 @@ if(uL->getLog()==true){
         cout<<"Ingrese Developer del Software"<<endl;
         cin>>d;
         Software * sE= BibliotecaG->buscarSoftware(n,d);
+        //preguntar a los demas usuarios 
+
         if(sE!=NULL){
-            BibliotecaG->EliminarSoftware(sE);
-            cout<<"Se Elimino el Software"<<endl;
+                 if(desinstalarSoftware(ListaGeneralDeUsuarios,sE)){
+                    cout<<"Se Elimino el Software"<<endl;
+                 }else{
+                    cout<<"No se elimino el Software"<<endl;
+                 }
+                  
         }else{
             cout<<"No se encontro el Software"<<endl;
         }
@@ -619,3 +632,25 @@ while(_user==NULL){
 }
     return _user;
 };
+
+
+bool desinstalarSoftware(ListaDeUsuario* listaU, Software* _software){
+
+        int sizeLu= _software->getListaDeUsuarios()->getCont();
+        Usuario* userI;
+        string op;
+        for(int i=0;i<sizeLu;i++){
+         userI= _software->getListaDeUsuarios()->buscarUsuarioI(i);
+         cout<<userI->getNombre()+"Desea que el software sea eliminado? "<<endl;
+         cout<<"Ingrese --> NO <-- si no lo desea, en caso de que si ingrese cualquier tecla"<<endl;
+         cin>>op;
+         if(op=="NO"){
+            return false;
+         } 
+
+        }
+        return true;
+     
+     
+
+}
